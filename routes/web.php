@@ -2,11 +2,22 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-# Day 5. 路由: Router
+
+
+/**
+ * Day 6. 第一個頁面: Controller & View
+ * 介紹路由設定
+ */
+Route::get('/firstView', 'FirstViewController@firstView')->name('firstView');
+
+
+# ========================================================================================================
+
+/**
+ * Day 5. 路由: Router
+ * 介紹路由設定
+ */
 Route::get('basicRouteUseClosure', function () {
     return 'basicRoute, Hello World';
 });
@@ -33,3 +44,12 @@ Route::group(['prefix' => 'routeGroups', 'as' => 'routeGroups' ], function() {
 //     Route::get('/routeGroups/b', 'RouteGroupController@b')->name('routeGroups.b');
 //     Route::get('/routeGroups/c', 'RouteGroupController@c')->name('routeGroups.c');
 // });
+
+# ========================================================================================================
+
+/**
+ * 初始頁面
+ */
+Route::get('/', function () {
+    return view('welcome');
+});
