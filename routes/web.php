@@ -2,7 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
-
+/**
+ * Day 7. View: Blade
+ * 模板引擎
+ */
+Route::get('/bladeTest', 'BladeTestController@bladeTest')->name('bladeTest');
 
 
 /**
@@ -10,7 +14,6 @@ use Illuminate\Support\Facades\Route;
  * 介紹路由設定
  */
 Route::get('/firstView', 'FirstViewController@firstView')->name('firstView');
-
 
 # ========================================================================================================
 
