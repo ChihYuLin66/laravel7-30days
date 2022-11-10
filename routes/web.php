@@ -3,11 +3,25 @@
 use Illuminate\Support\Facades\Route;
 
 /**
+ * Day 8. Authentication-1 登入註冊
+ * Day 9. Authentication-2 信箱驗證
+ * Day 10. Authentication-3 忘記密碼/重設密碼
+ * 文件: https://laravel.com/docs/7.x/authentication
+ */
+Auth::routes(['verify' => true]);
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+# ======================================================================================================== #
+
+/**
  * Day 7. View: Blade
  * 模板引擎
+ * 文件: https://laravel.com/docs/7.x/blade
  */
 Route::get('/bladeTest', 'BladeTestController@bladeTest')->name('bladeTest');
 
+# ======================================================================================================== #
 
 /**
  * Day 6. 第一個頁面: Controller & View
@@ -15,11 +29,12 @@ Route::get('/bladeTest', 'BladeTestController@bladeTest')->name('bladeTest');
  */
 Route::get('/firstView', 'FirstViewController@firstView')->name('firstView');
 
-# ========================================================================================================
+# ======================================================================================================== #
 
 /**
  * Day 5. 路由: Router
  * 介紹路由設定
+ * 文件: https://laravel.com/docs/7.x/routing
  */
 Route::get('basicRouteUseClosure', function () {
     return 'basicRoute, Hello World';
@@ -48,7 +63,7 @@ Route::group(['prefix' => 'routeGroups', 'as' => 'routeGroups' ], function() {
 //     Route::get('/routeGroups/c', 'RouteGroupController@c')->name('routeGroups.c');
 // });
 
-# ========================================================================================================
+# ======================================================================================================== #
 
 /**
  * 初始頁面
@@ -56,7 +71,3 @@ Route::group(['prefix' => 'routeGroups', 'as' => 'routeGroups' ], function() {
 Route::get('/', function () {
     return view('welcome');
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
