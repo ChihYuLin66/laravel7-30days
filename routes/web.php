@@ -3,6 +3,15 @@
 use Illuminate\Support\Facades\Route;
 
 /**
+ * Day 13. 第二個頁面: 個人資料維護 & csrf
+ */
+
+Route::group(['prefix' => 'profile', 'as' => 'profile.' ], function() {
+    Route::get('/', 'ProfileController@edit')->name('edit');
+    Route::post('/', 'ProfileController@update')->name('update');
+});
+
+/**
  * Day 8. Authentication-1 登入註冊
  * Day 9. Authentication-2 信箱驗證
  * Day 10. Authentication-3 忘記密碼/重設密碼
@@ -50,7 +59,7 @@ Route::get('/basicRouteWithParam/{id}', 'BasicRouteController@show');
 Route::get('/basicRouteDefineName', 'BasicRouteController@defineName')->name('thisIsBasicRouteDefineName');
 
 ### 群組後
-Route::group(['prefix' => 'routeGroups', 'as' => 'routeGroups' ], function() {
+Route::group(['prefix' => 'routeGroups', 'as' => 'routeGroups.' ], function() {
     Route::get('/a', 'RouteGroupController@a')->name('a');
     Route::get('/b', 'RouteGroupController@b')->name('b');
     Route::get('/c', 'RouteGroupController@c')->name('c');
