@@ -4,9 +4,9 @@ use Illuminate\Support\Facades\Route;
 
 /**
  * Day 13. 第二個頁面: 個人資料維護 & csrf
+ * Day 14. 中介層 Middleware
  */
-
-Route::group(['prefix' => 'profile', 'as' => 'profile.' ], function() {
+Route::group(['prefix' => 'profile', 'as' => 'profile.', 'middleware' => 'auth' ], function() {
     Route::get('/', 'ProfileController@edit')->name('edit');
     Route::post('/', 'ProfileController@update')->name('update');
 });
