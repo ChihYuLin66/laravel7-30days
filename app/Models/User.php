@@ -46,4 +46,16 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->hasOne(UserProfile::class);
     }
+
+    /**
+    * 關聯 Task
+    *
+    * @return Illuminate\Database\Eloquent\Model Task
+    */
+    public function tasks()
+    {
+        return $this->hasMany(Task::class);
+    }
+
+
 }

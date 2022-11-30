@@ -3,6 +3,13 @@
 use Illuminate\Support\Facades\Route;
 
 /**
+ * ToDo CRUD
+ * Day 22. CRUD 很簡單 Resource Controllers
+ * Day 23. 實作 TODO 練習 上篇:前置作業
+ */
+Route::resource('tasks', 'TaskController');
+
+/**
  * Day 13. 第二個頁面: 個人資料維護 & csrf
  * Day 14. 中介層 Middleware
  */
