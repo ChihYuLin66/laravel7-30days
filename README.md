@@ -6,6 +6,7 @@ laravel7 之 30 天分享 ： 範例專案
 
 | day  | file              |
 |-----------|------------------|
+| Day 24 | app/Http/Controllers/TaskController.php <br> app/Models/Task.php <br> resources/views/tasks/create.blade.php <br> resources/views/tasks/edit.blade.php <br> resources/views/tasks/index.blade.php|
 | Day 23 |routes/web.php <br> app/Models/User.php  <br> app/Models/Task.php  <br> app/Http/Controllers/TaskController.php  <br> database/migrations/2022_11_30_154019_create_tasks_table.php |
 | Day 14 | route/web.php |
 | Day 13 | app/Http/Controllers/ProfileController.php <br> app/Model/UserProfile.php <br> app/Models/User.php <br> app/Models/UserProfile.php <br> resources/views/layouts/app.blade.php <br> resources/views/profile.blade.php <br> routes/web.php |
@@ -14,5 +15,6 @@ laravel7 之 30 天分享 ： 範例專案
 | Day 7 | app/Http/Controllers/BladeTestController.php <br> resources/views/day7/layouts/app.blade.php <br> resources/views/day7/layouts/header.blade.php <br> resources/views/day7/testContent.blade.php <br> routes/web.php |
 | Day 6 | app/Http/Controllers/FirstViewController.php <br> resources/views/day6/firstView.blade.php <br> routes/web.php |
 | Day 5 | app/Http/Controllers/BasicRouteController.php <br> app/Http/Controllers/RouteGroupController.php <br>routes/web.php |
+
 
 
