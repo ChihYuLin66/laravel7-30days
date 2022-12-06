@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
  * ToDo CRUD
  * Day 22. CRUD 很簡單 Resource Controllers
  * Day 23. 實作 TODO 練習 上篇:前置作業
+ * Day 24. 實作 TODO 練習 下篇:畫面及功能
+ * Day 25. Validation
  */
 Route::resource('tasks', 'TaskController');
 

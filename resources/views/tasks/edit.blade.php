@@ -13,6 +13,13 @@
                         <div class="form-group">
                             <label for="title">Title</label>
                             <input class="form-control" type="text" name="title" value="{{ old('title', $task->title) }}">
+                            @if ($errors->has('title'))
+                                @foreach ($errors->get('title') as $message)
+                                    <div style="color:red;">
+                                        {{ $message }}
+                                    </div>
+                                @endforeach
+                            @endif
                         </div>
                          
                         <button class="btn btn-primary" type="submit">save</button>

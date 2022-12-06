@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Task;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 
 class TaskController extends Controller
 {
@@ -31,6 +32,10 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
+        Validator::make($request->all(), [
+            'title' => 'required'
+        ])->validate();
+        
         Auth::user()->tasks()->create([
             'title' => $request->title
         ]);
@@ -60,6 +65,10 @@ class TaskController extends Controller
      */
     public function update(Request $request, Task $task)
     {
+        Validator::make($request->all(), [
+            'title' => 'required'
+        ])->validate();
+        
         $task->update([
             'title' => $request->title
         ]);
