@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Task;
 use Illuminate\Http\Request;
+use App\Http\Requests\TaskRequest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 
@@ -30,12 +31,8 @@ class TaskController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(TaskRequest $request)
     {
-        Validator::make($request->all(), [
-            'title' => 'required'
-        ])->validate();
-        
         Auth::user()->tasks()->create([
             'title' => $request->title
         ]);
@@ -63,12 +60,8 @@ class TaskController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Task $task)
+    public function update(TaskRequest $request, Task $task)
     {
-        Validator::make($request->all(), [
-            'title' => 'required'
-        ])->validate();
-        
         $task->update([
             'title' => $request->title
         ]);
