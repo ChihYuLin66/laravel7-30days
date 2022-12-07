@@ -36,7 +36,9 @@ class TaskController extends Controller
         Auth::user()->tasks()->create([
             'title' => $request->title
         ]);
-        
+
+
+        session()->flash('flash-alert-success', '寫入成功!');
         return redirect()->route('tasks.index');   
     }
 
@@ -65,6 +67,8 @@ class TaskController extends Controller
         $task->update([
             'title' => $request->title
         ]);
+
+        session()->flash('flash-alert-success', '更新成功!');
         return redirect()->route('tasks.index');
     }
 

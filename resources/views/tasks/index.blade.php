@@ -7,6 +7,17 @@
             <div class="card">
                 <div class="card-header">ToDo List</div>
                 <div class="card-body">
+
+                    @if (session('flash-alert-success'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('flash-alert-success') }}
+                        </div>
+                    @elseif (session('flash-alert-error'))
+                        <div class="alert alert-danger" role="alert">
+                            {{ session('flash-alert-error') }}
+                        </div>
+                    @endif
+
                     <div class="row">
                         <div class="col-md-12 mb-1">
                             <a href="{{ route('tasks.create') }}">
