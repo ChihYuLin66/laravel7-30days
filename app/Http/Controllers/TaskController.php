@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Task;
 use Illuminate\Http\Request;
 use App\Http\Requests\TaskRequest;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 
@@ -15,6 +16,8 @@ class TaskController extends Controller
      */
     public function index()
     {
+        Log::info('log test');
+        
         $tasks = Auth::user()->tasks;
 
         return view('tasks.index', compact('tasks'));
