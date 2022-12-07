@@ -15,10 +15,8 @@ class TaskController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {
-        Log::info('log test');
-        
-        $tasks = Auth::user()->tasks;
+    {   
+        $tasks = Auth::user()->tasks()->paginate(5);
 
         return view('tasks.index', compact('tasks'));
     }

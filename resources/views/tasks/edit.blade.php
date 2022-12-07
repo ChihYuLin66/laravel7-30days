@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">ToDo List Edit</div>
+                <div class="card-header">ToDo Edit</div>
                 <div class="card-body">
                     <form action="{{ route('tasks.update', $task->id) }}" method="POST">
                         @csrf

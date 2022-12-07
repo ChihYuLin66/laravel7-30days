@@ -24,6 +24,7 @@
                                 <button class="btn btn-primary">create</button>
                             </a>
                         </div>
+                        
                         <div class="col-md-12">
                             <table class="table">
                                 <thead>
@@ -62,6 +63,7 @@
                                     @endif
                                 </tbody>
                             </table>
+                            {{ $tasks->links() }}
                         </div>
                     </div>                    
                 </div>

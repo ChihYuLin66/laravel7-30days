@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">ToDo List Create</div>
+                <div class="card-header">ToDo Create</div>
                 <div class="card-body">
                     <form action="{{ route('tasks.store') }}" method="POST">
                         @csrf

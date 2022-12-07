@@ -6,6 +6,7 @@ laravel7 之 30 天分享 ： 範例專案
 
 | day  | file              |
 |-----------|------------------|
+| Day 29 | app/Http/Controllers/TaskController.php <br> resources/views/tasks/index.blade.php |
 | Day 27 | app/Http/Controllers/TaskController.php <br> resources/views/tasks/index.blade.php |
 | Day 26 |  app/Http/Controllers/TaskController.php <br> app/Http/Requests/TaskRequest.php |
 | Day 25 | app/Http/Controllers/TaskController.php <br> resources/views/tasks/create.blade.php <br> resources/views/tasks/edit.blade.php |
